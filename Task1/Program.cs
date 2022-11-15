@@ -51,7 +51,6 @@ int SumMaxRows(int[,] array)
         }
         sum += max;
     }
-    System.Console.WriteLine(sum);
     return sum;
 }
 
@@ -67,7 +66,6 @@ int SumMinColumns(int[,] array)
         }
         sum += min;
     }
-    System.Console.WriteLine(sum);
     return sum;
 }
 
@@ -77,6 +75,8 @@ int columns = Prompt("Введите количество столбцов");
 int[,] numbers = CreateArray(rows, columns);
 PrintArray(numbers);
 int defference = SumMaxRows(numbers) - SumMinColumns(numbers);
+System.Console.WriteLine($"Сумма максимумов в строках равна => {SumMaxRows(numbers)}");
+System.Console.WriteLine($"Сумма минимумов в столбцах равна => {SumMinColumns(numbers)}");
 System.Console.WriteLine($"Разность сумм максимумов в строках и минимумов в столбцах равна => {defference}");
 
 
